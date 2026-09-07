@@ -3,7 +3,4 @@ node_modules/
 dist/
 build/
 *.log
-.DS_Store# Git workflow practice
-# Another practice change
-# Main branch change
-# Conflict branch change
+.DS_Store
