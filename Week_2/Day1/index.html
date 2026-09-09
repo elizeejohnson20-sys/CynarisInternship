@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced CSS Techniques</title>
+    <link rel="stylesheet" href="advanced_styles.css">
+</head>
+
+<body>
+
+    <!-- Sticky Navigation -->
+    <nav class="navbar">
+        <h2>CSS Advanced</h2>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#features">Features</a>
+            <a href="#progress">Progress</a>
+        </div>
+
+        <!-- CSS-only Theme Switcher -->
+        <div class="theme-switch">
+            <input type="checkbox" id="themeToggle">
+            <label for="themeToggle">Dark Mode</label>
+        </div>
+    </nav>
+
+    <main>
+
+        <!-- Home Section -->
+        <section id="home" class="hero">
+            <h1>Advanced CSS Techniques</h1>
+
+            <p>
+                Learning CSS custom properties, animations,
+                pseudo-elements and responsive UI techniques.
+            </p>
+
+            <a href="#features" class="explore-button">Explore</a>
+        </section>
+
+        <!-- Loading Spinner -->
+        <section id="features" class="card">
+            <h2>Animated Loading Spinner</h2>
+
+            <div class="spinner"></div>
+
+            <p>
+                This loading spinner is created entirely with CSS animation.
+            </p>
+        </section>
+
+        <!-- Progress Bar -->
+        <section id="progress" class="card">
+            <h2>Animated Progress Bar</h2>
+
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
+
+            <p>Loading progress: 75%</p>
+        </section>
+
+        <!-- Pseudo-elements -->
+        <section class="card decorative">
+            <h2>Pseudo-elements</h2>
+
+            <p>
+                The decorative lines around this section are created
+                using CSS ::before and ::after pseudo-elements.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Advanced CSS Practice — Week 2 Day 1</p>
+    </footer>
+
+</body>
+</html>
