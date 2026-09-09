@@ -1,0 +1,336 @@
+/* ================================
+   CSS CUSTOM PROPERTIES
+================================ */
+
+:root {
+    --bg-color: #f4f4f4;
+    --text-color: #222222;
+    --card-color: #ffffff;
+    --primary-color: #2563eb;
+    --secondary-color: #1d4ed8;
+    --border-color: #dddddd;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --spacing: 1rem;
+}
+
+
+/* ================================
+   SMOOTH SCROLLING
+================================ */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* ================================
+   BASIC PAGE STYLING
+================================ */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+/* ================================
+   CSS-ONLY DARK/LIGHT THEME
+================================ */
+
+body:has(#themeToggle:checked) {
+    --bg-color: #111827;
+    --text-color: #f9fafb;
+    --card-color: #1f2937;
+    --primary-color: #60a5fa;
+    --secondary-color: #3b82f6;
+    --border-color: #374151;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+
+/* ================================
+   STICKY NAVIGATION
+================================ */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+
+    padding: 1rem 5%;
+
+    background: var(--card-color);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
+}
+
+.navbar h2 {
+    margin: 0;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+
+/* ================================
+   THEME SWITCH
+================================ */
+
+.theme-switch {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+#themeToggle {
+    cursor: pointer;
+}
+
+
+/* ================================
+   MAIN CONTENT
+================================ */
+
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+section {
+    min-height: 60vh;
+    padding: 5rem 1rem;
+}
+
+
+/* ================================
+   HERO SECTION
+================================ */
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    max-width: 650px;
+    line-height: 1.7;
+}
+
+.explore-button {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.8rem 1.5rem;
+
+    background: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 0.5rem;
+
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.explore-button:hover {
+    background: var(--secondary-color);
+    transform: translateY(-3px);
+}
+
+
+/* ================================
+   CARD
+================================ */
+
+.card {
+    position: relative;
+
+    margin-bottom: 2rem;
+    padding: 3rem 2rem;
+
+    background: var(--card-color);
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.card h2 {
+    margin-top: 0;
+}
+
+
+/* ================================
+   CSS ANIMATED LOADING SPINNER
+================================ */
+
+.spinner {
+    width: 60px;
+    height: 60px;
+
+    margin: 2rem auto;
+
+    border: 7px solid var(--border-color);
+    border-top: 7px solid var(--primary-color);
+
+    border-radius: 50%;
+
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* ================================
+   ANIMATED PROGRESS BAR
+================================ */
+
+.progress-container {
+    width: 90%;
+    max-width: 700px;
+
+    height: 25px;
+
+    margin: 2rem auto;
+
+    background: var(--border-color);
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+.progress-bar {
+    width: 75%;
+    height: 100%;
+
+    background: var(--primary-color);
+
+    border-radius: 20px;
+
+    animation: progressAnimation 2s ease-in-out infinite alternate;
+}
+
+@keyframes progressAnimation {
+    from {
+        width: 20%;
+    }
+
+    to {
+        width: 75%;
+    }
+}
+
+
+/* ================================
+   ::BEFORE AND ::AFTER
+================================ */
+
+.decorative::before {
+    content: "";
+    position: absolute;
+
+    top: 20px;
+    left: 10%;
+
+    width: 80%;
+    height: 3px;
+
+    background: var(--primary-color);
+}
+
+.decorative::after {
+    content: "";
+    position: absolute;
+
+    bottom: 20px;
+    left: 10%;
+
+    width: 80%;
+    height: 3px;
+
+    background: var(--primary-color);
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    padding: 2rem;
+
+    text-align: center;
+
+    background: var(--card-color);
+    border-top: 1px solid var(--border-color);
+}
+
+
+/* ================================
+   RESPONSIVE DESIGN
+================================ */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    section {
+        padding: 4rem 0.5rem;
+    }
+
+    .card {
+        padding: 2rem 1rem;
+    }
+}
