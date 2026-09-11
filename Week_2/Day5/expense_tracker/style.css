@@ -1,0 +1,120 @@
+/* Reset default browser spacing */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Page styling */
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+    min-height: 100vh;
+}
+
+/* Main container */
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+/* Main heading */
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Sections */
+.summary,
+.expense-form,
+.expense-list {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+/* Summary */
+.summary {
+    text-align: center;
+}
+
+#totalAmount {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Form */
+#expenseForm {
+    display: grid;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+input,
+select,
+button {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* Button */
+button {
+    cursor: pointer;
+    border: none;
+}
+
+/* Expense list */
+#expenseList {
+    list-style: none;
+    display: grid;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* Individual expense */
+#expenseList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+/* Mobile responsive design */
+@media (max-width: 600px) {
+
+    .container {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    .summary,
+    .expense-form,
+    .expense-list {
+        padding: 15px;
+    }
+
+    #expenseList li {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    input,
+    select,
+    button {
+        width: 100%;
+    }
+}
