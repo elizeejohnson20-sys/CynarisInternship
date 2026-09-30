@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product API Frontend</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Product Management</h1>
+
+        <section id="login-section">
+            <h2>API Login</h2>
+
+            <input type="email" id="email" placeholder="Email">
+            <input type="password" id="password" placeholder="Password">
+
+            <button onclick="login()">Login</button>
+
+            <p id="login-message"></p>
+        </section>
+
+        <section id="product-section" class="hidden">
+            <h2>Products</h2>
+
+            <button onclick="loadProducts()">Refresh Products</button>
+
+            <div id="products"></div>
+
+            <h2>Add Product</h2>
+
+            <input type="text" id="name" placeholder="Product name">
+            <input type="text" id="description" placeholder="Description">
+            <input type="number" id="price" placeholder="Price">
+            <input type="number" id="stock" placeholder="Stock">
+
+            <button onclick="addProduct()">Add Product</button>
+
+            <p id="product-message"></p>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
