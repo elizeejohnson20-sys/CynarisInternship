@@ -14,5 +14,9 @@ php artisan route:cache
 echo "Caching Laravel views..."
 php artisan view:cache
 
+echo "Creating SQLite database..."
+mkdir -p /var/www/html/database
+touch /var/www/html/database/database.sqlite
+
 echo "Running database migrations..."
 php artisan migrate --force
