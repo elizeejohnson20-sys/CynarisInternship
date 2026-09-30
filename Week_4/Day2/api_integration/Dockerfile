@@ -1,5 +1,4 @@
-FROM richarvey/nginx-php-fpm:3.1.6
-
+FROM tangramor/nginx-php8-fpm:php8.4.16_withoutNodejs
 COPY . .
 
 ENV SKIP_COMPOSER=1
