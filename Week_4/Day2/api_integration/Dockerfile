@@ -31,10 +31,15 @@ RUN composer install \
     --no-dev \
     --no-interaction \
     --prefer-dist \
-    --optimize-autoloader
+    --optimize-autoloader\
+    --no-scripts
 
 # Copy Laravel application
 COPY . .
+
+# Run Laravel Composer scripts after artisan is available
+RUN composer dump-autoload --optimize
+
 
 # Prepare Laravel directories
 RUN mkdir -p \
